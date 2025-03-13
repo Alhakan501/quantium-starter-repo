@@ -5,7 +5,7 @@ import pandas as pd
 import plotly as plt
 
 
-app=Dash(external_stylesheets=[dbc.themes.DARKLY])
+app=Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.layout=html.Div(
     children=[
         html.Header('Dash App')
