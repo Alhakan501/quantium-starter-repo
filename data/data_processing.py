@@ -61,7 +61,7 @@ def clean_dataframe(df:pd.DataFrame)->pd.DataFrame:
 def create_csv(df:pd.DataFrame):
     print("Creating the output file 'final.csv'........")
     
-    df.to_csv('data/final.csv')
+    df.to_csv('data/final.csv',index=False)
     
     print('Successfully create file:  data/final.csv ')
     
