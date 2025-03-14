@@ -1,16 +1,20 @@
-from dash import Dash,html,dcc
+from dash import Dash
+
 from dash.dependencies import Input,Output
 import dash_bootstrap_components  as dbc
-import pandas as pd
-import plotly as plt
+
+from  components import main_component , line_graph
+from data_filtering import read_dataset
+
+
+data=read_dataset()
+
 
 
 app=Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-app.layout=html.Div(
-    children=[
-        html.Header('Dash App')
-        ]
-)
+app.layout=[main_component(), 
+            
+            line_graph(data[0],data[1],data[2])]
 
 
 

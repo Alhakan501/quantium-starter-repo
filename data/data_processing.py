@@ -47,6 +47,8 @@ def clean_dataframe(df:pd.DataFrame)->pd.DataFrame:
     
     df=df[['sales','date','region'] ]
     
+    df=df.sort_values(by ='date',ascending=True)
+    
     return df
     
     
