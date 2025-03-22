@@ -1,0 +1,123 @@
+body{padding: 0px;background-color: rgb(7, 8, 14);margin: 0px}
+
+
+
+#body{background-color: transparent;
+    width: 100vw;
+    margin:0px;
+    padding: 0px;
+}
+
+#header_label{height: 10vh;
+   width: 100%;
+    justify-content:center;
+     align-content: center;
+      color: white;
+      background-color: rgb(15, 15, 21);
+    font-size: xx-large;
+display: flex;
+flex-direction: row;
+justify-content: space-between; 
+
+}
+
+
+#title{
+    width:15%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#tit {
+    margin: 0px;         
+    margin-left: 30px;  
+    margin-top: 15px;    
+    font-size: 28px;     
+    font-weight: bold;  
+    color: white;         
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+#sub { 
+    font-weight: 500;     
+    font-size: 16px; 
+    font-weight: bold;     
+    color: rgba(250,250,250,0.4);          
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 3px;     
+}
+
+
+
+.radio-div {
+    background-color: transparent;
+    border:  1px solid green;
+    width: 90%;
+    
+    padding-left: 80%;
+    
+ }
+.radio_items{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid green;
+    width: 20%;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+
+
+input[type="radio"]:hover {
+    cursor: pointer;
+    
+    
+  }
+
+  input[type="radio"]::after {
+    border: 1px hidden;
+  }
+
+
+  label {
+    background-color: transparent;
+    margin-right: 40px; 
+    font-size:medium;
+    font-weight:520;
+    cursor: pointer; 
+    font-family: Arial, sans-serif;  
+    color:white
+ 
+}
+
+label:hover {
+    color: skyblue;
+    cursor: pointer;  
+ 
+}
+
+
+.row_0{height: 50vh;width: 100%;background-color: transparent;margin-top: 10px;margin-bottom:20px}
+
+.row_1{height: 45vh;width: 100%;background-color: transparent;margin-top: 10px;margin-bottom:20px;display: flex;flex-direction: row;}
+
+.line_card{background-color: rgb(15, 15, 21);padding: 20px;border-radius: 25px;width: 90%;align-self: center;margin-left: 3%;height: 90%;border:2px solid rgba(255,255,255,0.1)}
+
+.line_card:hover{background-color: rgb(15, 15, 21);padding: 20px;border-radius: 25px;width: 90%;align-self: center;margin-left: 3%;height: 90%;border:2px solid rgba(3, 101, 133,1);cursor:pointer}
+
+
+.card{width: 40%;background-color:  rgb(15, 15, 21);margin-left: 6% ;border-radius: 25px;border:2px solid rgba(255,255,255,0.1)}
+.card:hover{width: 40%;background-color:  rgb(15, 15, 21);margin-left: 6% ;border-radius: 25px;border:2px solid rgba(3, 101, 133,0.4);cursor:pointer}
+
+#radio_div{
+    display: flex;
+    gap:0 ;
+    background-color:transparent;
+    width:25vw;
+    align-items:center
+}

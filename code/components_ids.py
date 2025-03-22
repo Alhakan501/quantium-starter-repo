@@ -1,0 +1,8 @@
+body='body'
+radio_items='radio_items'
+bar_graph='bar-graph'
+pie_graph='pie-graph'
+line_graph='line-graph'
+header_label='header_label' 
+title='title'
+radio_div='radio_div'
