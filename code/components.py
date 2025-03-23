@@ -14,8 +14,8 @@ def main_component() -> html.Div:
                     html.Div(
                     id=id.title,
                         children=[
-                            html.H4("SOUL FOODS",id='tit'),
-                            html.H6("Pink Morsel Sales",id='sub',)
+                            html.H4("SOUL FOODS",id='header'),
+                            html.H6("Pink Morsel Sales",id='sub-header',)
                             ]),
                     radio_items(items),
                 ])
@@ -143,7 +143,7 @@ app_frame=[dbc.Container(id=id.body,
 
                html.Div(className='row_0',
                          children=[
-                           html.Div(className='line_card',
+                           html.Div(clasubssName='line_card',
                          children=[
                             dcc.Graph(id=id.line_graph)])
                          ]),
