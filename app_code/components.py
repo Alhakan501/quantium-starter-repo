@@ -1,9 +1,9 @@
 
 from dash import html,dcc
 import pandas as pd
-import plotly.express as plt
+import plotly.express as px
 import plotly.graph_objects as go
-import components_ids as id
+import app_code.components_ids as id
 import dash_bootstrap_components  as dbc
 
 
@@ -32,8 +32,8 @@ def main_component() -> html.Div:
 
 
 
-def line_graph(dataframe:pd.DataFrame,cut_off_date,last_recorded_date,region)->plt.line:
-    fig=plt.line(dataframe, y='sales', x='date',labels={"date": "Date", "sales": "Total Sales ($)"},title=f"Total Sales by Date for {region} region")
+def line_graph(dataframe:pd.DataFrame,cut_off_date,last_recorded_date,region)->px.line:
+    fig=px.line(dataframe, y='sales', x='date',labels={"date": "Date", "sales": "Total Sales ($)"},title=f"Total Sales by Date for {region} region")
     fig.add_vline(x=cut_off_date,exclude_empty_subplots=True,line_width=1, line_dash="dash", line_color="yellow")
     fig.add_hline(y='$1565',line_width=1, line_dash="dash",line_color='gray') 
     fig.update_layout(
@@ -64,7 +64,7 @@ def line_graph(dataframe:pd.DataFrame,cut_off_date,last_recorded_date,region)->p
 
 
 def bar_chart(data_frame,region)->dcc.Graph:
-    fig = plt.bar(data_frame,x='Period',y='Total Sales',title=f'Overall Total Sales for {region} region',range_y=[0,8000000] )
+    fig = px.bar(data_frame,x='Period',y='Total Sales',title=f'Overall Total Sales for {region} region',range_y=[0,8000000] )
     fig.update_layout(
         paper_bgcolor='rgba(0,0,0,0)',  
         plot_bgcolor='rgba(0,0,0,0)', 
@@ -85,7 +85,7 @@ def bar_chart(data_frame,region)->dcc.Graph:
 
 
 def pie_chart(data_frame,region)->dcc.Graph:
-    fig = plt.pie( data_frame,names='Period',values='Total Sales',title=f'Overall Total Sales for {region} region',hole=0.5,)
+    fig = px.pie( data_frame,names='Period',values='Total Sales',title=f'Overall Total Sales for {region} region',hole=0.5,)
     fig.update_layout(
     paper_bgcolor='rgba(0,0,0,0)',  
     plot_bgcolor='rgba(0,0,0,0)',  
@@ -143,7 +143,7 @@ app_frame=[dbc.Container(id=id.body,
 
                html.Div(className='row_0',
                          children=[
-                           html.Div(clasubssName='line_card',
+                           html.Div(className='line_card',
                          children=[
                             dcc.Graph(id=id.line_graph)])
                          ]),

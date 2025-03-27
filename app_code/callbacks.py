@@ -1,7 +1,7 @@
 
-from dash import Dash,html,callback,dcc
-from  components import main_component , line_graph,bar_chart,pie_chart,radio_items,app_frame,dbc,id
-from data_filtering import Data
+from dash import callback
+from  app_code.components import main_component , line_graph,bar_chart,pie_chart,radio_items,app_frame,dbc,id
+from app_code.data_filtering import Data
 from dash.dependencies import Input,Output
 
 

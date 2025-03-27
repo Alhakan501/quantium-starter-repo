@@ -1,7 +1,8 @@
 
-import dash_bootstrap_components as dbc
+from dash import  Dash
 
-from callbacks import *
+
+from app_code.callbacks import *
 
 
 
