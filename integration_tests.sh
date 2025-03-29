@@ -31,14 +31,15 @@ git_push(){
     sleep 1
     echo -e "\nPushing changes to GitHub..."
     sleep 1
-    if git remote set-url https://github.com/Alhakan501/quantium-starter-repo | git push ; then
-            echo -e "\n✅ Successfully pushed to GitHub"
-            exit 0  
-    else
-            echo -e "\n❌ Push failed"
-            exit 0
-    fi  
+   git remote set-url origin https://github.com/Alhakan501/quantium-starter-repo.git
 
+    if git push origin main; then
+        echo -e "\n✅ Successfully pushed to GitHub"
+        exit 0
+    else
+        echo -e "\n❌ Push failed with error code $?"
+        exit 1 
+    fi
 
 }
 
