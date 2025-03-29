@@ -2,7 +2,7 @@
 from dash import  Dash
 
 
-from app_code.callbacks import *
+from Soul_foods.callbacks import *
 
 
 

@@ -1,5 +1,6 @@
 #this file contains all the pytest fixtures
 from  dash.testing.application_runners import import_app
+# from Soul_foods.app_main import
 from selenium.webdriver.firefox.options import Options
 from dash.testing.composite import DashComposite
 import pytest
@@ -13,7 +14,7 @@ import pytest
 
 @pytest.fixture()
 def app_():
-    return import_app('app_code.app_main') #use import_app from dash.testing.application_runners passing the app.main file path
+    return import_app('Soul_foods.app_main') #use import_app from dash.testing.application_runners passing the app.main file path
    
 
 

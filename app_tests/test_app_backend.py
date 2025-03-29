@@ -1,4 +1,4 @@
-from app_code.data_filtering import Data 
+from Soul_foods.data_filtering import Data 
 import pandas as pd
 
 

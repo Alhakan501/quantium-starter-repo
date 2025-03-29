@@ -1,5 +1,5 @@
 
-from app_code.components_ids import test_bar_graph,test_header,test_sub_header,test_radio_items,test_pie_graph,test_line_graph
+from Soul_foods.components_ids import test_bar_graph,test_header,test_sub_header,test_radio_items,test_pie_graph,test_line_graph
 
 
 

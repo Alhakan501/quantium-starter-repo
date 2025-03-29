@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Soul_foods"
+version = "0.1.0"
+description = "a dash board visualizing the sales of a product by soul foods over a period of time"
+readme = "README.md"
+authors = [
+    {name = "Alpha Hassan Kanu", email = "alhakan04@email.com"}
+]
+# license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+    "requests>=2.25",
+    "pandas>=1.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/Alhakan501/quantium-starter-repo"
+Documentation = "https://github.com/Alhakan501/quantium-starter-repo#readme"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "black>=22.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
