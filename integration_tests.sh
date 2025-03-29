@@ -1,10 +1,16 @@
 #!/bin/bash
-set -euo pipefail
 set e
 
 
+# creates a venv if not exists
+if [ ! -d "venv" ]; then
+    python -m venv venv
+    source venv/bin/activate 
+    pip install -r requirements.txt
+fi
 
 
+#check for all uncommited changes in the folder, then add and commits them
 check_git_changes() {
     echo "Checking Git status..."
     if [[ -n $(git status --porcelain) ]]; then
@@ -25,7 +31,7 @@ check_git_changes() {
 
 
 
-
+#pushes the changes to github
 git_push(){
     check_git_changes $1
     sleep 1
@@ -52,7 +58,7 @@ git_push(){
 
 
 
-
+#the main script. runs the tests, the prompt to push changes
 echo "----- Checking for test files -----"
 sleep 1
 echo " 🧪 Running integration tests from: "
